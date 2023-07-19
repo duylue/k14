@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html
+        xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+</style>
+<body>
+<table>
+    <tr>
+        <td>id</td>
+        <td>name</td>
+        <td> address</td>
+    </tr>
+    <tr th:each="student :${list}">
+        <td th:text="${student.id}"></td>
+        <td th:text="${student.sname}"></td>
+        <td th:text="${student.address}"></td>
+        <td></td>
+    </tr>
+</table>
+</body>
+</html>

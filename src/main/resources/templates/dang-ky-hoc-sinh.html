@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html
+        xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Dang Ky Hoc Sinh</h1>
+<p th:text="${ 'Thong bao :' + message}  "> </p>
+<p th:text="${ 'Ho ten :' + student.getSname()}  "> </p>
+<p th:text="${'id : '+ student.id}"></p>
+<p th:text="${'address : '+student.address}"></p>
+
+<form action="/student/save" method="post" th:object="${student}"  >
+    <label> id : </label>
+    <input type="text" th:field="*{id}"><br><br>
+    <label> name : </label>
+    <input type="text" th:field="*{sname}"><br><br>
+    <label> address : </label>
+    <input type="text" th:field="*{sname}"><br><br>
+
+    <button type="submit">Dang ky</button>
+</form>
+</body>
+</html>

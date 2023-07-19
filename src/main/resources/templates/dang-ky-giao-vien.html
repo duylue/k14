@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html
+        xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Dang Ky Giao Vien </h1>
+<form action="/student/save-gv"method="post" th:object="${teacher}">
+  <label>id</label>
+  <input th:field="*{id}" type="text"><br><br>
+  <label>name</label>
+  <input type="text" th:field="*{tname}" ><br><br>
+  <label>address</label>
+  <input type="text" th:field="*{address}" ><br><br>
+  <button type="submit">Dang ky</button>
+</form>
+</body>
+</html>
